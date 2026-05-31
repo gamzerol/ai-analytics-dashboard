@@ -21,3 +21,14 @@ export interface TopPage {
   uniqueVisitors: number
   bounceRate: number
 }
+
+export interface AnalyticsRow {
+  id: string
+  page: string
+  visitors: number
+  pageViews: number
+  bounceRate: number
+  avgSession: string
+  revenue: number
+  trend: 'up' | 'down' | 'neutral'
+}
