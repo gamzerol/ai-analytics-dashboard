@@ -92,18 +92,20 @@ npm run storybook    # component explorer
 
 ## Project Structure
 
+```
 src/
 ├── app/
-│ ├── (auth)/ # login page
-│ └── (dashboard)/ # protected dashboard pages
+│   ├── (auth)/          # login page
+│   └── (dashboard)/     # protected dashboard pages
 ├── components/
-│ ├── ui/ # shadcn base components
-│ └── features/ # domain-specific components
+│   ├── ui/              # shadcn base components
+│   └── features/        # domain-specific components
 ├── lib/
-│ ├── auth.ts # NextAuth config
-│ ├── mock-data.ts # mock data
-│ └── utils.ts # helpers
+│   ├── auth.ts          # NextAuth config
+│   ├── mock-data.ts     # mock data
+│   └── utils.ts         # helpers
 ├── tests/
-│ ├── unit/ # Vitest unit tests
-│ └── e2e/ # Playwright E2E tests
-└── types/ # global TypeScript types
+│   ├── unit/            # Vitest unit tests
+│   └── e2e/             # Playwright E2E tests
+└── types/               # global TypeScript types
+```
