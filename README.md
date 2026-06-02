@@ -2,15 +2,6 @@
 
 A modern, production-grade analytics dashboard built with Next.js 15, TypeScript, and AI-powered insights.
 
-## Live Demo
-
-> Coming soon — Vercel deploy (Hafta 4)
-
-**Demo credentials:**
-
-- Email: `demo@dashboard.com`
-- Password: `password123`
-
 ---
 
 ## Tech Stack
@@ -43,7 +34,7 @@ A modern, production-grade analytics dashboard built with Next.js 15, TypeScript
 
 - [Vitest](https://vitest.dev) — unit testing
 - [Testing Library](https://testing-library.com) — component testing
-- [Playwright](https://playwright.dev) — E2E testing (coming soon)
+- [Playwright](https://playwright.dev) — E2E testing
 
 **Tooling**
 
@@ -75,8 +66,6 @@ cp .env.example .env.local
 # Run development server
 npm run dev
 ```
-
-Open [http://localhost:3000](http://localhost:3000)
 
 ### Environment Variables
 
