@@ -1,36 +1,120 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# AI Analytics Dashboard
+
+A modern, production-grade analytics dashboard built with Next.js 15, TypeScript, and AI-powered insights.
+
+## Live Demo
+
+> Coming soon — Vercel deploy (Hafta 4)
+
+**Demo credentials:**
+
+- Email: `demo@dashboard.com`
+- Password: `password123`
+
+---
+
+## Tech Stack
+
+**Core**
+
+- [Next.js 15](https://nextjs.org) — App Router, Server Components
+- [TypeScript](https://typescriptlang.org) — strict mode
+- [React 19](https://react.dev)
+
+**UI & Styling**
+
+- [Tailwind CSS v4](https://tailwindcss.com) — utility-first styling
+- [shadcn/ui](https://ui.shadcn.com) — accessible component library
+- [Storybook 8](https://storybook.js.org) — component documentation
+
+**Data & State**
+
+- [TanStack Table](https://tanstack.com/table) — headless data table
+- [Recharts](https://recharts.org) — composable chart library
+- [Zustand](https://zustand-demo.pmnd.rs) — client state management
+- [TanStack Query](https://tanstack.com/query) — server state management
+- [Zod](https://zod.dev) — schema validation
+
+**Auth**
+
+- [NextAuth v5](https://authjs.dev) — JWT-based authentication
+
+**Testing**
+
+- [Vitest](https://vitest.dev) — unit testing
+- [Testing Library](https://testing-library.com) — component testing
+- [Playwright](https://playwright.dev) — E2E testing (coming soon)
+
+**Tooling**
+
+- ESLint + Prettier — code quality
+- Husky + lint-staged — pre-commit hooks
+- GitHub Actions — CI/CD pipeline
+
+---
+
+## Features
+
+- **Authentication** — secure login with JWT session management and route protection
+- **Overview Dashboard** — metric cards, area charts, top pages table
+- **Analytics Page** — sortable, filterable, paginated data table with TanStack Table
+- **Design System** — custom CSS token system, dark/light mode, Storybook documentation
+- **CI/CD** — automated lint and type-check on every push
+
+---
 
 ## Getting Started
 
-First, run the development server:
-
 ```bash
+# Install dependencies
+npm install
+
+# Set up environment variables
+cp .env.example .env.local
+
+# Run development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Environment Variables
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+AUTH_SECRET=your-secret-here
+NEXTAUTH_URL=http://localhost:3000
+```
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## Scripts
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+npm run dev          # development server
+npm run build        # production build
+npm run lint         # ESLint
+npm test             # unit tests
+npm run test:watch   # watch mode
+npm run test:coverage # coverage report
+npm run storybook    # component explorer
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## Project Structure
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+src/
+├── app/
+│ ├── (auth)/ # login page
+│ └── (dashboard)/ # protected dashboard pages
+├── components/
+│ ├── ui/ # shadcn base components
+│ └── features/ # domain-specific components
+├── lib/
+│ ├── auth.ts # NextAuth config
+│ ├── mock-data.ts # mock data
+│ └── utils.ts # helpers
+├── tests/
+│ ├── unit/ # Vitest unit tests
+│ └── e2e/ # Playwright E2E tests
+└── types/ # global TypeScript types
